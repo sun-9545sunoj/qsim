@@ -351,7 +351,7 @@ class SimulatorCUDA final {
     IndicesH<G> d_i(d_ws);
 
     ApplyGateH_Kernel<G><<<CreateGrid(blocks), threads>>>(
-        (fp_type*)d_ws, d_i.xss, d_i.ms, state.get());
+        (fp_type*) d_ws, d_i.xss, d_i.ms, state.get());
   }
 
   template <unsigned G>
